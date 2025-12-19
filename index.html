@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Form Validation</title>
+</head>
+
+<body>
+
+  <div class="container my-5">
+
+    <h3 class="text-center mb-4">NORMAL VALIDATION</h3>
+
+    <div class="bg-secondary p-4 rounded">
+
+      <form id="userForm" class="row g-3">
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Enter Your Name</label>
+          <input type="text" id="name" class="form-control">
+          <div id="nameerror" class="name "></div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Email</label>
+          <input type="email" id="email" class="form-control">
+          <div id="mailerror" class="mail "></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Password</label>
+          <input type="password" id="password" class="form-control">
+          <div id="passworderror" class="password"></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Re-Enter Password</label>
+          <input type="password" id="repassword" class="form-control">
+          <div id="re-passworderror" class="repassword "></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Date of Birth</label>
+          <input type="date" id="dob" class="form-control">
+          <div id="doberror" class="dob"></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Phone</label>
+          <input type="text" id="phone" class="form-control">
+          <div id="phoneerror" class="phone"></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Gender</label>
+
+          <div class="form-check">
+            <input type="radio" name="gender" value="Male" class="form-check-input">
+            <label class="form-check-label text-light">Male</label>
+          </div>
+
+          <div class="form-check">
+            <input type="radio" name="gender" value="Female" class="form-check-input">
+            <label class="form-check-label text-light">Female</label>
+          </div>
+
+          <div id="gendererror" class="gender"></div>
+        </div>
+
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Course</label>
+          <select id="course" class="form-select">
+            <option value="">-- Select Course --</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+          </select>
+          <div id="courseerror" class="course "></div>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label text-light">Country</label>
+          <select id="country" class="form-select">
+            <option value="">-- Select Country --</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+          </select>
+          <div id="countryerror" class="country"></div>
+        </div>
+
+
+        <div class="col-12 text-center mt-4">
+          <button type="button" onclick="myFunction()" class="btn btn-warning w-50">
+            Save
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Form Submit Successfully.</p>
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+
+
+          <button type="button" class="btn btn-primary" id="saveBtn">
+            Clear Form
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./javascript/script.js"></script>
+</body>
+
+</html>
